@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS participants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    section VARCHAR(50) NOT NULL,
+    birth_date DATE NULL,
+    has_report TINYINT(1) NOT NULL DEFAULT 0,
+    report_topic VARCHAR(255) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
